@@ -11,12 +11,14 @@
         <div>
             <form action="~/Home/Index" method="post">
                 @Html.AntiForgeryToken()
-                <textarea name="review" placeholder="@ViewBag.Review"></textarea><br />
+                <label for="review">Movie Name: Parasite(2020, Amazon Prime)</label><br /><br />
+                <textarea name="review" id="review" cols="100" rows="15" placeholder="@ViewBag.Review"></textarea><br />
                 <input type="submit">
             </form>
         </div><br />
         <div>
-            <p> You have Entered a @Convert.ToString(ViewBag.Result) Review</p>
+            <b>Analysis Report: </b><br />
+            <p> You have entered a <b>@Convert.ToString(ViewBag.Result) Review</b></p>
         </div>
     }
     else
@@ -24,10 +26,18 @@
         <div>
             <form action="~/Home/Index" method="post">
                 @Html.AntiForgeryToken()
-                <textarea name="review" placeholder="Enter your review here"></textarea><br />
+                <label for="review">Movie Name: Parasite(2020, Amazon Prime)</label><br /><br />
+                <textarea name="review" id="review" cols="100" rows="15" placeholder="Enter a review here to check your sentiment"></textarea><br />
                 <input type="submit">
             </form>
         </div>
     }
+    <br />
+    <br />
+    <div>
+        <h5>
+            Implementation of deep learning based sentiment analysis on web app developed with asp.net core by <b>Koushik Saha</b>
+        </h5>
+    </div>
 </body>
 </html>
