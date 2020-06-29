@@ -1,43 +1,93 @@
 ﻿<!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Review</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="~/images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
 </head>
 <body>
-    @if (ViewBag.Review != null && ViewBag.Result != null)
-    {
-        <div>
-            <form method="post">
-                @Html.AntiForgeryToken()
-                <label for="review">Movie Name: Parasite(2020, Amazon Prime)</label><br /><br />
-                <textarea name="review" id="review" cols="100" rows="15" placeholder="@ViewBag.Review"></textarea><br />
-                <input type="submit">
-            </form>
-        </div><br />
-        <div>
-            <b>Analysis Report: </b><br />
-            <p> You have entered a <b>@Convert.ToString(ViewBag.Result) Review</b></p>
-        </div>
-    }
-    else
-    {
-        <div>
-            <form action="~/Home/Index" method="post">
-                @Html.AntiForgeryToken()
-                <label for="review">Movie Name: Parasite(2020, Amazon Prime)</label><br /><br />
-                <textarea name="review" id="review" cols="100" rows="15" placeholder="Enter a review here to check your sentiment"></textarea><br />
-                <input type="submit">
-            </form>
-        </div>
-    }
-    <br />
-    <br />
-    <div>
-        <h5>
-            Implementation of deep learning based sentiment analysis on web app developed with asp.net core by <b>Koushik Saha</b>
-        </h5>
+
+
+    <div class="container-contact100">
+        @if (ViewBag.Review != null && ViewBag.Result != null)
+        {
+            <div class="wrap-contact100">
+                <form class="contact100-form validate-form" method="post">
+                    @Html.AntiForgeryToken()
+                    <span class="contact100-form-title">
+                        Movie Review of Chhapaak
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Please enter your review">
+                        <textarea style="resize: none;" class="input100" name="review" placeholder="@ViewBag.Review"></textarea>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <button class="contact100-form-btn" type="submit">
+                            <span>
+                                <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                                Submit
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                <h6>Review Analysis:</h6>
+                <p>You have entered a <b>@ViewBag.Result review</b></p>
+            </div>
+        }
+        else
+        {
+            <div class="wrap-contact100">
+                <form class="contact100-form validate-form" method="post">
+                    @Html.AntiForgeryToken()
+                    <span class="contact100-form-title">
+                        Movie Review of Movie Chhapaak
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Please enter your review">
+                        <textarea style="resize: none;" class="input100" name="review" placeholder="Your review"></textarea>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <button class="contact100-form-btn" type="submit">
+                            <span>
+                                <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                                Submit
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        }
     </div>
+
+
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            <p>An Implementation of Deep Neural Network. Developed with asp.net core 3.1</p><br />
+            © 2020 Copyright:
+            <a href="#">Koushik Saha</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+    <!--===============================================================================================-->
+    <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="~/vendor/animsition/js/animsition.min.js"></script>
+    <script src="~/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+
 </body>
 </html>

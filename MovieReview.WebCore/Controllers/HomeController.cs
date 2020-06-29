@@ -13,6 +13,13 @@ namespace MovieReview.WebCore.Controllers
         // GET: HomeController
         public ActionResult Index()
         {
+            //string[] movies = { "Tanhaji", "Street Dancer 3D", "Malang", "Chhapaak", "Jawaani Jaaneman" };
+
+            //// Create a Random object  
+            //Random rand = new Random();
+            //// Generate a random index less than the size of the array.  
+            //int index = rand.Next(movies.Length);
+            //ViewBag.movieName = movies[index];
             return View();
         }
 
