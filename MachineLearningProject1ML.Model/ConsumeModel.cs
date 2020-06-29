@@ -8,7 +8,7 @@ using Microsoft.ML;
 using Microsoft.ML.Data;
 using MovieReviewML.Model;
 
-namespace MovieReviewML.Model
+namespace Review.Model
 {
     public class ConsumeModel
     {

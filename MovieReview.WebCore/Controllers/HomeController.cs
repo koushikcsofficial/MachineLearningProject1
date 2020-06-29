@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MovieReviewML.Model;
+using Review.Model;
 
 namespace MovieReview.WebCore.Controllers
 {
