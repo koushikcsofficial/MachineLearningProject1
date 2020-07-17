@@ -12,4 +12,8 @@
   <ItemGroup>
     <ProjectCapability Include="ModelBuilderGenerated" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Review.Model\Review.Model.csproj" />
+  </ItemGroup>
 </Project>
