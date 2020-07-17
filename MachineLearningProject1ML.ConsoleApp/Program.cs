@@ -19,7 +19,6 @@ namespace MachineLearningProject1ML.ConsoleApp
             Console.WriteLine("Using model to make single prediction -- Comparing actual Sentiment with predicted Sentiment from sample data...\n\n");
             Console.WriteLine($"Review: {sampleData.Review}");
             Console.WriteLine($"\n\nPredicted Sentiment value {predictionResult.Prediction} \nPredicted Sentiment scores: [{String.Join(",", predictionResult.Score)}]\n\n");
-            Console.WriteLine("=============== End of process, hit any key to finish ===============");
             Console.ReadKey();
         }
     }
